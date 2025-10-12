@@ -1,0 +1,39 @@
+{
+  "object": "Jupiter",
+  "type": "Gas Giant",
+  "discovery": {
+    "known_since": "Prehistoric",
+    "reference": "https://ssd.jpl.nasa.gov/planets/phys_par.html"
+  },
+  "physical_properties": {
+    "equatorial_radius_km": 71492,
+    "mass_kg": 1.8982e27,
+    "mean_density_g_cm3": 1.326,
+    "surface_gravity_m_s2": 24.79,
+    "escape_velocity_km_s": 59.5,
+    "rotation_period_days": 0.41354,
+    "axial_tilt_degrees": 3.13
+  },
+  "orbital_elements": {
+    "semi_major_axis_au": 5.20336301,
+    "eccentricity": 0.04839266,
+    "inclination_degrees": 1.30530,
+    "longitude_ascending_node_degrees": 100.55615,
+    "argument_of_perihelion_degrees": 14.75385,
+    "mean_anomaly_degrees": 34.40438,
+    "orbital_period_days": 4332.589,
+    "mean_orbital_speed_km_s": 13.07
+  },
+  "photometry": {
+    "geometric_albedo": 0.538,
+    "absolute_magnitude_H": -9.40
+  },
+  "atmosphere": {
+    "composition": "89.8% H2, 10.2% He, traces of CH4, NH3, H2O"
+  },
+  "notes": "Jupiter is the largest planet in the Solar System. It has at least 95 known moons, including the four large Galilean moons.",
+  "references": [
+    "https://ssd.jpl.nasa.gov/planets/",
+    "https://nssdc.gsfc.nasa.gov/planetary/factsheet/jupiterfact.html"
+  ]
+}

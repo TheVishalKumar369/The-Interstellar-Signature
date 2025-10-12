@@ -1,0 +1,40 @@
+{
+  "object": "3I/ATLAS",
+  "type": "Interstellar comet (tentative)",
+  "discovery": {
+    "date": "2020-12-12",
+    "discovered_by": "Asteroid Terrestrial-impact Last Alert System (ATLAS)",
+    "telescope": "ATLAS-HKO, Haleakalā, Hawaii",
+    "reference": "https://ssd.jpl.nasa.gov/tools/sbdb_lookup.html#/?sstr=3I/ATLAS"
+  },
+  "physical_properties": {
+    "estimated_diameter_km": null,
+    "albedo": 0.04,
+    "color_index_BV": 0.82
+  },
+  "spectral_data": {
+    "spectral_type": "D-type (tentative)",
+    "dominant_materials": ["carbonaceous ices", "organic tholins"],
+    "detected_volatiles": []
+  },
+  "photometry": {
+    "absolute_magnitude_H": 18.9,
+    "slope_parameter_G": 0.15
+  },
+  "reflectance_spectrum": [
+    {"wavelength_um": 0.45, "reflectance": 0.87},
+    {"wavelength_um": 0.55, "reflectance": 0.93},
+    {"wavelength_um": 0.65, "reflectance": 1.02}
+  ],
+  "observation_metadata": {
+    "instruments": ["Pan-STARRS", "ATLAS", "Gemini North"],
+    "date_range": ["2020-12-12", "2021-03-05"],
+    "observers": ["Fitzsimmons et al.", "Jewitt et al."]
+  },
+  "notes": "3I/ATLAS was announced as a potential interstellar comet in 2020. Limited observations suggest a reddish color and weak activity near perihelion, but its interstellar origin remains uncertain due to incomplete orbital data.",
+  "references": [
+    "https://ssd.jpl.nasa.gov/tools/sbdb_lookup.html",
+    "https://arxiv.org/abs/2104.08337",
+    "https://sbn.psi.edu/pds/asteroid/"
+  ]
+}

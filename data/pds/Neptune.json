@@ -1,0 +1,40 @@
+{
+  "object": "Neptune",
+  "type": "Ice Giant",
+  "discovery": {
+    "date": "1846-09-23",
+    "discovered_by": "Johann Galle (based on Urbain Le Verrier's calculations)",
+    "reference": "https://ssd.jpl.nasa.gov/planets/phys_par.html"
+  },
+  "physical_properties": {
+    "equatorial_radius_km": 24764,
+    "mass_kg": 1.02413e26,
+    "mean_density_g_cm3": 1.638,
+    "surface_gravity_m_s2": 11.15,
+    "escape_velocity_km_s": 23.5,
+    "rotation_period_days": 0.67125,
+    "axial_tilt_degrees": 28.32
+  },
+  "orbital_elements": {
+    "semi_major_axis_au": 30.06896348,
+    "eccentricity": 0.00858587,
+    "inclination_degrees": 1.76917,
+    "longitude_ascending_node_degrees": 131.72169,
+    "argument_of_perihelion_degrees": 44.97135,
+    "mean_anomaly_degrees": 304.88003,
+    "orbital_period_days": 60189.0,
+    "mean_orbital_speed_km_s": 5.43
+  },
+  "photometry": {
+    "geometric_albedo": 0.442,
+    "absolute_magnitude_H": -6.87
+  },
+  "atmosphere": {
+    "composition": "80% H2, 19% He, 1.5% CH4"
+  },
+  "notes": "Neptune is the windiest planet in the Solar System, with winds reaching speeds of 2,100 km/h. It has 14 known moons.",
+  "references": [
+    "https://ssd.jpl.nasa.gov/planets/",
+    "https://nssdc.gsfc.nasa.gov/planetary/factsheet/neptunefact.html"
+  ]
+}

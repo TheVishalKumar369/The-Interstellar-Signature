@@ -1,0 +1,40 @@
+{
+  "object": "Mercury",
+  "type": "Terrestrial Planet",
+  "discovery": {
+    "known_since": "Prehistoric",
+    "reference": "https://ssd.jpl.nasa.gov/planets/phys_par.html"
+  },
+  "physical_properties": {
+    "equatorial_radius_km": 2439.7,
+    "mass_kg": 3.3011e23,
+    "mean_density_g_cm3": 5.427,
+    "surface_gravity_m_s2": 3.7,
+    "escape_velocity_km_s": 4.25,
+    "rotation_period_days": 58.646,
+    "axial_tilt_degrees": 0.034
+  },
+  "orbital_elements": {
+    "semi_major_axis_au": 0.38709893,
+    "eccentricity": 0.20563069,
+    "inclination_degrees": 7.00487,
+    "longitude_ascending_node_degrees": 48.33167,
+    "argument_of_perihelion_degrees": 77.45645,
+    "mean_anomaly_degrees": 252.25084,
+    "orbital_period_days": 87.969,
+    "mean_orbital_speed_km_s": 47.87
+  },
+  "photometry": {
+    "geometric_albedo": 0.142,
+    "absolute_magnitude_H": -0.42
+  },
+  "atmosphere": {
+    "surface_pressure_bar": 0.0,
+    "composition": "Trace amounts of hydrogen, helium, oxygen, sodium, calcium, potassium"
+  },
+  "notes": "Mercury is the smallest and innermost planet in the Solar System. It has no atmosphere to speak of, and its surface is heavily cratered.",
+  "references": [
+    "https://ssd.jpl.nasa.gov/planets/",
+    "https://nssdc.gsfc.nasa.gov/planetary/factsheet/mercuryfact.html"
+  ]
+}

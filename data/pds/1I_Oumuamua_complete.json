@@ -1,0 +1,41 @@
+{
+  "object": "1I/ʻOumuamua",
+  "type": "Interstellar object (asteroid-like)",
+  "discovery": {
+    "date": "2017-10-19",
+    "discovered_by": "Robert Weryk",
+    "telescope": "Pan-STARRS1, Haleakalā Observatory, Hawaii",
+    "reference": "https://ssd.jpl.nasa.gov/tools/sbdb_lookup.html#/?sstr=1I"
+  },
+  "physical_properties": {
+    "estimated_diameter_km": 0.2,
+    "albedo": 0.10,
+    "color_index_BV": 0.70
+  },
+  "spectral_data": {
+    "spectral_type": "D-type (reddish, featureless)",
+    "dominant_materials": ["organic-rich carbon compounds", "silicate dust"],
+    "detected_volatiles": []
+  },
+  "photometry": {
+    "absolute_magnitude_H": 22.3,
+    "slope_parameter_G": 0.15
+  },
+  "reflectance_spectrum": [
+    {"wavelength_um": 0.45, "reflectance": 0.88},
+    {"wavelength_um": 0.55, "reflectance": 0.94},
+    {"wavelength_um": 0.65, "reflectance": 1.05}
+  ],
+  "observation_metadata": {
+    "instruments": ["Gemini North", "VLT", "CFHT", "Spitzer Space Telescope"],
+    "date_range": ["2017-10-19", "2017-12-10"],
+    "observers": ["Meech et al.", "Jewitt et al."]
+  },
+  "notes": "1I/ʻOumuamua is the first detected interstellar object. It shows a highly elongated shape and a featureless red spectrum similar to D-type asteroids. No cometary activity or detectable volatiles were found.",
+  "references": [
+    "https://sbn.psi.edu/pds/asteroid/",
+    "https://ssd.jpl.nasa.gov/tools/sbdb_lookup.html",
+    "https://www.nature.com/articles/nature25020",
+    "https://ui.adsabs.harvard.edu/abs/2018NatAs...2..420F/abstract"
+  ]
+}

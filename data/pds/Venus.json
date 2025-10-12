@@ -1,0 +1,40 @@
+{
+  "object": "Venus",
+  "type": "Terrestrial Planet",
+  "discovery": {
+    "known_since": "Prehistoric",
+    "reference": "https://ssd.jpl.nasa.gov/planets/phys_par.html"
+  },
+  "physical_properties": {
+    "equatorial_radius_km": 6051.8,
+    "mass_kg": 4.8675e24,
+    "mean_density_g_cm3": 5.243,
+    "surface_gravity_m_s2": 8.87,
+    "escape_velocity_km_s": 10.36,
+    "rotation_period_days": -243.018,
+    "axial_tilt_degrees": 177.36
+  },
+  "orbital_elements": {
+    "semi_major_axis_au": 0.72333199,
+    "eccentricity": 0.00677323,
+    "inclination_degrees": 3.39471,
+    "longitude_ascending_node_degrees": 76.68069,
+    "argument_of_perihelion_degrees": 131.53298,
+    "mean_anomaly_degrees": 181.97973,
+    "orbital_period_days": 224.701,
+    "mean_orbital_speed_km_s": 35.02
+  },
+  "photometry": {
+    "geometric_albedo": 0.689,
+    "absolute_magnitude_H": -4.47
+  },
+  "atmosphere": {
+    "surface_pressure_bar": 92.0,
+    "composition": "96.5% CO2, 3.5% N2, traces of SO2, H2O"
+  },
+  "notes": "Venus is the hottest planet in our Solar System due to its thick carbon dioxide atmosphere and greenhouse effect.",
+  "references": [
+    "https://ssd.jpl.nasa.gov/planets/",
+    "https://nssdc.gsfc.nasa.gov/planetary/factsheet/venusfact.html"
+  ]
+}

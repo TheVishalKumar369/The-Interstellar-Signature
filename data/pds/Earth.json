@@ -1,0 +1,40 @@
+{
+  "object": "Earth",
+  "type": "Terrestrial Planet",
+  "discovery": {
+    "known_since": "Prehistoric",
+    "reference": "https://ssd.jpl.nasa.gov/planets/phys_par.html"
+  },
+  "physical_properties": {
+    "equatorial_radius_km": 6378.137,
+    "mass_kg": 5.9724e24,
+    "mean_density_g_cm3": 5.514,
+    "surface_gravity_m_s2": 9.8,
+    "escape_velocity_km_s": 11.19,
+    "rotation_period_days": 0.99726968,
+    "axial_tilt_degrees": 23.4392811
+  },
+  "orbital_elements": {
+    "semi_major_axis_au": 1.00000011,
+    "eccentricity": 0.01671022,
+    "inclination_degrees": 0.00005,
+    "longitude_ascending_node_degrees": -11.26064,
+    "argument_of_perihelion_degrees": 102.94719,
+    "mean_anomaly_degrees": 100.46435,
+    "orbital_period_days": 365.256,
+    "mean_orbital_speed_km_s": 29.78
+  },
+  "photometry": {
+    "geometric_albedo": 0.367,
+    "absolute_magnitude_H": -3.86
+  },
+  "atmosphere": {
+    "surface_pressure_bar": 1.014,
+    "composition": "78% N2, 21% O2, 1% Ar, traces of CO2, H2O"
+  },
+  "notes": "Earth is the only known planet to harbor life. It has one natural satellite, the Moon.",
+  "references": [
+    "https://ssd.jpl.nasa.gov/planets/",
+    "https://nssdc.gsfc.nasa.gov/planetary/factsheet/earthfact.html"
+  ]
+}

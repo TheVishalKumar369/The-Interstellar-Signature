@@ -1,0 +1,40 @@
+{
+  "object": "Mars",
+  "type": "Terrestrial Planet",
+  "discovery": {
+    "known_since": "Prehistoric",
+    "reference": "https://ssd.jpl.nasa.gov/planets/phys_par.html"
+  },
+  "physical_properties": {
+    "equatorial_radius_km": 3396.2,
+    "mass_kg": 6.4171e23,
+    "mean_density_g_cm3": 3.9335,
+    "surface_gravity_m_s2": 3.71,
+    "escape_velocity_km_s": 5.03,
+    "rotation_period_days": 1.02595675,
+    "axial_tilt_degrees": 25.19
+  },
+  "orbital_elements": {
+    "semi_major_axis_au": 1.52366231,
+    "eccentricity": 0.09341233,
+    "inclination_degrees": 1.85061,
+    "longitude_ascending_node_degrees": 49.57854,
+    "argument_of_perihelion_degrees": 336.04084,
+    "mean_anomaly_degrees": 355.45332,
+    "orbital_period_days": 686.980,
+    "mean_orbital_speed_km_s": 24.07
+  },
+  "photometry": {
+    "geometric_albedo": 0.170,
+    "absolute_magnitude_H": -1.52
+  },
+  "atmosphere": {
+    "surface_pressure_bar": 0.00636,
+    "composition": "95.97% CO2, 1.93% Ar, 1.89% N2, traces of O2, CO"
+  },
+  "notes": "Mars is known as the Red Planet due to iron oxide on its surface. It has two small moons: Phobos and Deimos.",
+  "references": [
+    "https://ssd.jpl.nasa.gov/planets/",
+    "https://nssdc.gsfc.nasa.gov/planetary/factsheet/marsfact.html"
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "object": "Saturn",
+  "type": "Gas Giant",
+  "discovery": {
+    "known_since": "Prehistoric",
+    "reference": "https://ssd.jpl.nasa.gov/planets/phys_par.html"
+  },
+  "physical_properties": {
+    "equatorial_radius_km": 60268,
+    "mass_kg": 5.6834e26,
+    "mean_density_g_cm3": 0.687,
+    "surface_gravity_m_s2": 10.44,
+    "escape_velocity_km_s": 35.5,
+    "rotation_period_days": 0.44401,
+    "axial_tilt_degrees": 26.73
+  },
+  "orbital_elements": {
+    "semi_major_axis_au": 9.53707032,
+    "eccentricity": 0.05415060,
+    "inclination_degrees": 2.48446,
+    "longitude_ascending_node_degrees": 113.71504,
+    "argument_of_perihelion_degrees": 92.43194,
+    "mean_anomaly_degrees": 49.94432,
+    "orbital_period_days": 10759.22,
+    "mean_orbital_speed_km_s": 9.69
+  },
+  "photometry": {
+    "geometric_albedo": 0.499,
+    "absolute_magnitude_H": -8.88
+  },
+  "atmosphere": {
+    "composition": "96.3% H2, 3.25% He, traces of CH4, NH3"
+  },
+  "notes": "Saturn is famous for its spectacular ring system. It has at least 146 known moons, with Titan being the largest.",
+  "references": [
+    "https://ssd.jpl.nasa.gov/planets/",
+    "https://nssdc.gsfc.nasa.gov/planetary/factsheet/saturnfact.html"
+  ]
+}

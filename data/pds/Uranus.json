@@ -1,0 +1,40 @@
+{
+  "object": "Uranus",
+  "type": "Ice Giant",
+  "discovery": {
+    "date": "1781-03-13",
+    "discovered_by": "William Herschel",
+    "reference": "https://ssd.jpl.nasa.gov/planets/phys_par.html"
+  },
+  "physical_properties": {
+    "equatorial_radius_km": 25559,
+    "mass_kg": 8.6810e25,
+    "mean_density_g_cm3": 1.270,
+    "surface_gravity_m_s2": 8.87,
+    "escape_velocity_km_s": 21.3,
+    "rotation_period_days": -0.71833,
+    "axial_tilt_degrees": 97.77
+  },
+  "orbital_elements": {
+    "semi_major_axis_au": 19.19126393,
+    "eccentricity": 0.04716771,
+    "inclination_degrees": 0.76986,
+    "longitude_ascending_node_degrees": 74.22988,
+    "argument_of_perihelion_degrees": 170.96424,
+    "mean_anomaly_degrees": 313.23218,
+    "orbital_period_days": 30685.4,
+    "mean_orbital_speed_km_s": 6.81
+  },
+  "photometry": {
+    "geometric_albedo": 0.488,
+    "absolute_magnitude_H": -7.19
+  },
+  "atmosphere": {
+    "composition": "82.5% H2, 15.2% He, 2.3% CH4"
+  },
+  "notes": "Uranus is unique for rotating on its side, with an axial tilt of 97.77 degrees. It has 27 known moons and a faint ring system.",
+  "references": [
+    "https://ssd.jpl.nasa.gov/planets/",
+    "https://nssdc.gsfc.nasa.gov/planetary/factsheet/uranusfact.html"
+  ]
+}

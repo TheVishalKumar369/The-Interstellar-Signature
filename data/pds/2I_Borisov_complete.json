@@ -1,0 +1,40 @@
+{
+  "object": "2I/Borisov",
+  "type": "Interstellar comet",
+  "discovery": {
+    "date": "2019-08-30",
+    "discovered_by": "Gennadiy Borisov",
+    "telescope": "MARGO Observatory, Crimea",
+    "reference": "https://ssd.jpl.nasa.gov/tools/sbdb_lookup.html#/?sstr=2I"
+  },
+  "physical_properties": {
+    "estimated_diameter_km": 0.4,
+    "albedo": 0.04,
+    "color_index_BV": 0.69
+  },
+  "spectral_data": {
+    "spectral_type": "D-type",
+    "dominant_materials": ["amorphous carbon", "silicate dust"],
+    "detected_volatiles": ["H₂O", "CN", "C₂", "CO"]
+  },
+  "photometry": {
+    "absolute_magnitude_H": 18.0,
+    "slope_parameter_G": 0.15
+  },
+  "reflectance_spectrum": [
+    {"wavelength_um": 0.45, "reflectance": 0.89},
+    {"wavelength_um": 0.55, "reflectance": 0.94},
+    {"wavelength_um": 0.65, "reflectance": 1.02}
+  ],
+  "observation_metadata": {
+    "instruments": ["Gran Telescopio Canarias (GTC)", "Hubble Space Telescope", "Gemini North", "Very Large Telescope (VLT)"],
+    "date_range": ["2019-09-13", "2020-01-13"],
+    "observers": ["Jewitt et al.", "Fitzsimmons et al."]
+  },
+  "notes": "2I/Borisov exhibited typical cometary composition similar to Solar System comets, with a redder spectrum.",
+  "references": [
+    "https://sbn.psi.edu/pds/asteroid/",
+    "https://ui.adsabs.harvard.edu/abs/2020ApJ...898L..38J/abstract",
+    "https://ssd.jpl.nasa.gov/tools/sbdb_lookup.html"
+  ]
+}
