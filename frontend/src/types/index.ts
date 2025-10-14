@@ -119,6 +119,7 @@ export interface QueryModeResponse {
   data_points: number;
   data: EphemerisData[];
   pds_metadata?: PDSMetadata; // Merged PDS metadata
+  planets?: Record<string, EphemerisData[]>; // Planet ephemeris data
 }
 
 export interface OrbitalResponse {

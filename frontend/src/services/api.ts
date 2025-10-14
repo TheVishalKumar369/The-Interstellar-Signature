@@ -11,7 +11,7 @@ const API_BASE_URL = import.meta.env.VITE_API_URL || 'http://localhost:8000';
 
 const api = axios.create({
   baseURL: API_BASE_URL,
-  timeout: 30000,
+  timeout: 90000, // 90 seconds - JPL Horizons can be slow when fetching planet ephemeris
   headers: {
     'Content-Type': 'application/json'
   }
@@ -45,7 +45,8 @@ export const apiClient = {
     startTime: string,
     stopTime: string,
     stepSize: string = '1d',
-    observer: string = '@399'
+    observer: string = '@399',
+    includePlanets: boolean = false
   ): Promise<QueryModeResponse> {
     const response = await api.post(
       `/api/query/${encodeURIComponent(objectId)}`,
@@ -55,8 +56,10 @@ export const apiClient = {
           start_time: startTime,
           stop_time: stopTime,
           step_size: stepSize,
-          observer
-        }
+          observer,
+          include_planets: includePlanets
+        },
+        timeout: includePlanets ? 300000 : 90000 // 5 minutes if fetching planets, otherwise 90 seconds
       }
     );
     return response.data;
@@ -75,14 +78,14 @@ export const apiClient = {
     stopTime: string,
     stepSize: string = '1d'
   ): Promise<MultiComparisonResponse> {
-    const response = await api.post('/api/compare-multi', null, {
-      params: {
-        object_ids: objectIds,
-        start_time: startTime,
-        stop_time: stopTime,
-        step_size: stepSize
-      }
-    });
+    // Build query string manually for array parameters
+    const params = new URLSearchParams();
+    objectIds.forEach(id => params.append('object_ids', id));
+    params.append('start_time', startTime);
+    params.append('stop_time', stopTime);
+    params.append('step_size', stepSize);
+
+    const response = await api.post(`/api/compare-multi?${params.toString()}`);
     return response.data;
   },
 

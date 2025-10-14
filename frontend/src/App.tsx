@@ -38,6 +38,9 @@ function AppContent() {
   // PDS metadata storage
   const [pdsMetadata, setPdsMetadata] = useState<Record<string, any>>({});
 
+  // Planet ephemeris storage (optional - only fetched once)
+  const [planetEphemeris, setPlanetEphemeris] = useState<Record<string, EphemerisData[]>>({});
+
   // Fetch available objects
   const { data: objects = [] } = useQuery({
     queryKey: ['objects'],
@@ -57,16 +60,21 @@ function AppContent() {
     try {
       const newTrajectoryData: Record<string, EphemerisData[]> = {};
       const newOrbitalElements: Record<string, OrbitalElements> = {};
+      let planetsFetched = false;
 
       for (const objectName of selectedObjects) {
         console.log(`Fetching ${objectName}...`);
 
-        // Fetch trajectory data
+        // Fetch trajectory data (include planets for first object only)
+        const includePlanets = !planetsFetched;
+
         const queryResponse = await apiClient.getQueryMode(
           objectName,
           startDate,
           endDate,
-          stepSize
+          stepSize,
+          '@sun',
+          includePlanets
         );
         console.log(`${objectName} trajectory response:`, queryResponse);
 
@@ -83,6 +91,13 @@ function AppContent() {
             console.log(`${objectName} PDS metadata loaded:`, queryResponse.pds_metadata.object);
           } else {
             console.warn(`${objectName} NO PDS metadata received from backend`);
+          }
+
+          // Store planet ephemeris data if included (only once)
+          if (includePlanets && queryResponse.planets) {
+            setPlanetEphemeris(queryResponse.planets);
+            planetsFetched = true;
+            console.log('Planet ephemeris loaded for:', Object.keys(queryResponse.planets));
           }
 
           // Update max timesteps
@@ -260,6 +275,7 @@ function AppContent() {
               maxTrajectoryPoints={maxTrajectoryPoints}
               animationMode={animationMode}
               currentTimestep={currentTimestep}
+              planetEphemeris={planetEphemeris}
             />
 
             {/* Animation Controls */}

@@ -273,13 +273,91 @@ def load_pds_metadata(object_name: str) -> Optional[dict]:
         return None
 
 
+def fetch_planet_ephemeris(start_time: str, stop_time: str, step_size: str) -> dict:
+    """
+    Fetch ephemeris data for all 9 planets (including Pluto) from JPL Horizons sequentially
+    with retry logic to avoid rate limiting
+
+    Args:
+        start_time: Start time for ephemeris
+        stop_time: Stop time for ephemeris
+        step_size: Time step
+
+    Returns:
+        Dictionary mapping planet names to their ephemeris data
+    """
+    import time
+
+    # JPL Horizons planet IDs (including Pluto as dwarf planet)
+    planets = {
+        "Mercury": "199",
+        "Venus": "299",
+        "Earth": "399",
+        "Mars": "499",
+        "Jupiter": "599",
+        "Saturn": "699",
+        "Uranus": "799",
+        "Neptune": "899",
+        "Pluto": "999"  # Pluto - dwarf planet
+    }
+
+    def fetch_single_planet_with_retry(planet_name: str, planet_id: str, max_retries=3):
+        """Fetch a single planet's ephemeris data with retry logic"""
+        for attempt in range(max_retries):
+            try:
+                logger.info(f"Fetching ephemeris for {planet_name} (ID: {planet_id}) [attempt {attempt + 1}/{max_retries}]")
+                result = horizons_fetcher.fetch_query_mode(
+                    planet_id, start_time, stop_time, step_size, observer="@sun"
+                )
+
+                if result['success']:
+                    data = result.get('data', [])
+                    logger.info(f"Successfully fetched {len(data)} data points for {planet_name}")
+                    return data
+                else:
+                    error_msg = result.get('error', 'Unknown error')
+                    if attempt < max_retries - 1:
+                        wait_time = (attempt + 1) * 2  # Exponential backoff: 2s, 4s, 6s
+                        logger.warning(f"Failed to fetch {planet_name}: {error_msg}. Retrying in {wait_time}s...")
+                        time.sleep(wait_time)
+                    else:
+                        logger.warning(f"Failed to fetch ephemeris for {planet_name} after {max_retries} attempts: {error_msg}")
+                        return []
+
+            except Exception as e:
+                if attempt < max_retries - 1:
+                    wait_time = (attempt + 1) * 2
+                    logger.error(f"Error fetching {planet_name}: {e}. Retrying in {wait_time}s...")
+                    time.sleep(wait_time)
+                else:
+                    logger.error(f"Error fetching ephemeris for {planet_name} after {max_retries} attempts: {e}")
+                    return []
+
+        return []
+
+    # Fetch planets sequentially with delays to avoid rate limiting
+    planet_ephemeris = {}
+
+    for i, (planet_name, planet_id) in enumerate(planets.items()):
+        planet_ephemeris[planet_name] = fetch_single_planet_with_retry(planet_name, planet_id)
+
+        # Add delay between requests (except after the last one)
+        if i < len(planets) - 1:
+            time.sleep(1)  # 1 second delay between planet requests
+
+    successful_count = sum(1 for data in planet_ephemeris.values() if len(data) > 0)
+    logger.info(f"Completed planet ephemeris fetch: {successful_count}/{len(planets)} successful - {list(planet_ephemeris.keys())}")
+    return planet_ephemeris
+
+
 @app.post("/api/query/{object_id:path}")
 async def get_query_mode_data(
     object_id: str,
     start_time: str = Query(..., description="Start time (YYYY-MM-DD or YYYY-MM-DD HH:MM)"),
     stop_time: str = Query(..., description="Stop time (YYYY-MM-DD or YYYY-MM-DD HH:MM)"),
     step_size: str = Query("1d", description="Time step (e.g., 1d, 6h, 1h)"),
-    observer: str = Query("@399", description="Observer location")
+    observer: str = Query("@399", description="Observer location"),
+    include_planets: bool = Query(False, description="Include planet ephemeris data")
 ):
     """
     QUERY MODE: Get custom time range data for visualization/analysis
@@ -293,6 +371,7 @@ async def get_query_mode_data(
         stop_time: End of time range
         step_size: Time interval between data points
         observer: Observer location
+        include_planets: Whether to include planet ephemeris data
 
     Returns:
         Timestamped ephemeris data merged with PDS metadata for simulation
@@ -311,6 +390,11 @@ async def get_query_mode_data(
 
             # Merge metadata into response
             result['pds_metadata'] = pds_metadata
+
+            # Fetch planet ephemeris data if requested
+            if include_planets:
+                planet_data = fetch_planet_ephemeris(start_time, stop_time, step_size)
+                result['planets'] = planet_data
 
             logger.info(f"[QUERY MODE] Returning {len(result.get('data', []))} timesteps with PDS metadata")
             return result
