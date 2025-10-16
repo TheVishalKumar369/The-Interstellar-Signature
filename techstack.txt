@@ -1,0 +1,126 @@
+  1. Overview Section
+
+  - Brief project summary
+  - Research objectives (visualizing interstellar object trajectories)
+  - Scientific approach (computational astronomy + 3D visualization)
+
+  2. Data Acquisition
+
+  JPL Horizons System Integration
+  - API endpoint: https://ssd.jpl.nasa.gov/api/horizons.api
+  - Query parameters: object ID, time range, step size, observer location
+  - Data format: CSV ephemeris tables
+  - Implementation: backend/fetch_data/horizons.py:120-180
+
+  PDS Metadata
+  - Source: Planetary Data System JSON files
+  - Content: Physical properties, discovery data, spectral information
+  - Storage: data/pds/*.json
+  - Merging logic: backend/fetch_data/data_merger.py
+
+  3. Orbital Mechanics Implementation
+
+  Kepler's Two-Body Problem
+  - Mean motion calculation: n = 360°/P (ThreeJSViewer.tsx:153)
+  - Mean anomaly: M = (M₀ + n·t) mod 360° (ThreeJSViewer.tsx:156)
+  - Kepler equation solver using Newton's method (10 iterations)
+  - True anomaly conversion via arctan2
+  - Heliocentric distance: r = a(1 - e·cos(E))
+
+  Coordinate Transformations
+  - Orbital plane → Heliocentric ecliptic (3D rotation matrices)
+  - Incorporation of: inclination (i), longitude of ascending node (Ω), argument of perihelion (ω)
+  - Three.js adaptation: (x,y,z) → (x,z,-y) for Y-up rendering
+
+  4. Physics Calculations
+
+  Orbital Energy Analysis
+  - Vis-viva equation: E = v²/2 - μ/r
+  - Solar gravitational parameter: μ = 2.959×10⁻⁴ AU³/day²
+  - Orbit classification: hyperbolic (E>0), parabolic (E=0), elliptical (E<0)
+  - Location: ComparisonCharts.tsx:67-71
+
+  Velocity Computations
+  - Magnitude: v = √(vx² + vy² + vz²)
+  - Escape velocity: v_esc = √(2μ/r)
+  - Average velocity over trajectory
+
+  5. Visualization Pipeline
+
+  Three.js Rendering Architecture
+  - Scene graph: Sun sphere + planet meshes + object spheres
+  - Trail rendering: LineBasicMaterial with time-stamped vertices
+  - Camera system: OrbitControls with dynamic focus
+  - Lighting: AmbientLight + DirectionalLight
+
+  Animation System
+  - Time interpolation: Linear stepped progression
+  - Frame updates: requestAnimationFrame loop
+  - Speed control: 0.5x to 10x multipliers
+  - Timeline: Date slider with synchronized object positions
+
+  6. Performance Optimization
+
+  Data Throttling
+  - Point reduction: step = ⌈N/N_max⌉ when N > 2000
+  - Implementation: ThreeJSViewer.tsx:486-487
+
+  Camera Interpolation
+  - Smooth transitions: p_new = p_current + 0.05(p_target - p_current)
+  - Reduces jitter during focus changes
+
+  7. Reference Frames & Time Systems
+
+  Coordinate Systems
+  - Heliocentric ecliptic (J2000.0/ICRF)
+  - Origin: Solar system barycenter
+  - Plane: Earth's orbital plane
+
+  Temporal Reference
+  - Epoch: J2000.0 (January 1, 2000, 12:00 TT)
+  - Time delta calculation: Days since J2000
+  - Julian Date support for ephemeris queries
+
+  8. Validation & Accuracy
+
+  - Cross-reference with JPL Horizons positions
+  - Kepler equation convergence criteria (machine precision after 10 iterations)
+  - Coordinate transformation verification
+  - Energy conservation checks
+
+  9. Software Stack
+
+  Frontend
+  - React 18 + TypeScript
+  - Three.js (r168) via @react-three/fiber
+  - Vite build system
+  - Recharts for comparative analysis
+
+  Backend
+  - FastAPI (Python 3.9+)
+  - Pydantic for data validation
+  - Asyncio for concurrent requests
+  - CORS middleware for cross-origin support
+
+  10. Limitations & Future Work
+
+  - Two-body approximation (no planetary perturbations)
+  - Non-gravitational forces not modeled (solar radiation pressure, outgassing)
+  - Limited to post-discovery observational arcs
+  - Future: N-body integration, uncertainty quantification
+
+  11. References
+
+  - JPL Horizons System documentation
+  - Planetary Data System standards
+  - Kepler orbit propagation literature
+  - Three.js rendering best practices
+
+  ---
+  Key Elements That Make This Strong:
+  - Code references with line numbers for reproducibility
+  - Mathematical equations with variable definitions
+  - Clear distinction between data sources, computation, and visualization
+  - Performance considerations documented
+  - Limitations explicitly stated
+  - Traceable from methodology → implementation

@@ -174,7 +174,7 @@ function AppContent() {
     <div className="app">
       {/* Header */}
       <header className="header">
-        <h1>🌌 3I/ATLAS - Interstellar Objects Comparison</h1>
+        <h1>THE INTERSTELLAR SIGNATURE - TRACK THE INTERSTELLAR WORLD</h1>
         <p>Visualizing trajectories of interstellar visitors to our solar system</p>
       </header>
 
