@@ -1,10 +1,16 @@
-# 🌌 3I/ATLAS - Interstellar Objects Visualization
+#  3I/ATLAS - Interstellar Objects Visualization
 
 An interactive 3D visualization platform for comparing trajectories of interstellar objects passing through our solar system. Built with Three.js, React, and FastAPI, powered by JPL Horizons ephemeris data.
 
-![3I/ATLAS Screenshot](https://via.placeholder.com/800x400?text=Add+Your+Screenshot+Here)
+<img width="1909" height="890" alt="Screenshot (824)" src="https://github.com/user-attachments/assets/3cc9a2d7-a627-41d1-8d9c-9dd9ff5b73cf" />
+<img width="1920" height="916" alt="overview_2" src="https://github.com/user-attachments/assets/20a2f4bc-1b88-48c7-891d-00e28650bde5" />
+<img width="732" height="463" alt="distance_comparisson" src="https://github.com/user-attachments/assets/c9c2ccc2-5498-4cfe-b10d-042979438c28" />
+<img width="723" height="481" alt="velocity" src="https://github.com/user-attachments/assets/08c14c15-8fa9-4a74-b9c2-8f555bf6a43c" />
+<img width="725" height="501" alt="energy" src="https://github.com/user-attachments/assets/664bf62f-950d-4aa4-8ba9-2a90fd82f73f" />
+<img width="739" height="484" alt="multi-character" src="https://github.com/user-attachments/assets/609d78fb-172d-43c9-8ed7-7b31671c69e2" />
 
-## 🎯 Features
+
+## Features
 
 ### 3D Visualization
 - **Real-time Three.js rendering** with accurate heliocentric coordinates
@@ -30,7 +36,7 @@ An interactive 3D visualization platform for comparing trajectories of interstel
 - **2I/Borisov** - First interstellar comet (2019)
 - **3I/ATLAS** - Third interstellar object (2025)
 
-## 🚀 Quick Start
+##  Quick Start
 
 ### Prerequisites
 - **Node.js** (v18 or higher)
@@ -88,7 +94,7 @@ Frontend will run at `http://localhost:3000`
 
 3. **Open your browser** and navigate to `http://localhost:3000`
 
-## 📖 Usage Guide
+##  Usage Guide
 
 ### Basic Workflow
 
@@ -121,7 +127,7 @@ Frontend will run at `http://localhost:3000`
 - **Right Mouse**: Pan view
 - **Scroll**: Zoom in/out
 
-## 🏗️ Project Structure
+##  Project Structure
 
 ```
 3I_ATLAS/
@@ -169,7 +175,7 @@ Frontend will run at `http://localhost:3000`
 └── README.md
 ```
 
-## 🔧 Technical Details
+##  Technical Details
 
 ### Backend Architecture
 - **FastAPI** for REST API endpoints
@@ -194,7 +200,7 @@ Frontend will run at `http://localhost:3000`
 - **PDS (Planetary Data System)**: Physical and spectral properties
 - **NASA/JPL**: Orbital elements and discovery information
 
-## 📊 API Endpoints
+## API Endpoints
 
 ### Objects
 - `GET /api/objects` - List all available interstellar objects
@@ -212,7 +218,7 @@ Frontend will run at `http://localhost:3000`
 - `GET /api/data/{object_name}` - Get cached PDS metadata
 - `GET /api/data` - List all available data files
 
-## 🎨 Customization
+##  Customization
 
 ### Adding New Objects
 
@@ -244,7 +250,7 @@ Modify `frontend/src/App.tsx`:
 <option value="50">50x</option>
 ```
 
-## 🐛 Troubleshooting
+##  Troubleshooting
 
 ### Backend Issues
 
@@ -271,24 +277,23 @@ API_PORT=8001
 - Check browser console for CORS errors
 - Ensure `.env` CORS_ORIGINS includes frontend URL
 
-## 📝 License
+## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-## 🙏 Acknowledgments
+##  Acknowledgments
 
 - **NASA JPL Horizons System** - Ephemeris data
 - **Planetary Data System (PDS)** - Scientific metadata
 - **Three.js Community** - 3D rendering framework
 - **React Three Fiber** - React renderer for Three.js
 
-## 📧 Contact
+## Contact
 
 For questions, issues, or contributions:
-- **GitHub Issues**: [Create an issue](https://github.com/yourusername/3I_ATLAS/issues)
-- **Email**: your.email@example.com
-
-## 🤝 Contributing
+- **GitHub Issues**: [Create an issue](https://github.com/TheVishalKumar369/3I_ATLAS/issues)
+- **Email**: panchanarayansahu00@gmail.com
+##  Contributing
 
 Contributions are welcome! Please:
 1. Fork the repository
@@ -297,7 +302,7 @@ Contributions are welcome! Please:
 4. Push to the branch (`git push origin feature/AmazingFeature`)
 5. Open a Pull Request
 
-## 🗺️ Roadmap
+## Roadmap
 
 - [ ] Add more interstellar objects as they're discovered
 - [ ] Implement WebGL orbit paths with line width support
@@ -310,3 +315,14 @@ Contributions are welcome! Please:
 ---
 
 **Made with ❤️ for space exploration and scientific visualization**
+
+
+
+
+
+
+
+
+
+
+
