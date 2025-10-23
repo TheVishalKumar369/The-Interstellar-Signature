@@ -3,7 +3,7 @@ title: "THE INTERSTELLAR SIGNATURE: A COMPUTATIONAL FRAMEWORK FOR OPEN SOURCE IN
 authors:
   - name: Pancha Narayan Sahu
     orcid: 0009-0003-7618-7588
-    affiliation: "Independent Researcher"
+    affiliation: "Independent Student Researcher"
 date: 2025-10-24
 ---
 
