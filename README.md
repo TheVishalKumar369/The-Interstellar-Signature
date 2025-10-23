@@ -132,17 +132,14 @@ Frontend will run at `http://localhost:3000`
 ```
 3I_ATLAS/
 ├── backend/                    # FastAPI backend
-│   ├── main.py                # Main API server
-│   ├── config.py              # Configuration
-│   ├── models.py              # Pydantic models
-│   ├── requirements.txt       # Python dependencies
-│   ├── fetch_data/            # Data fetching modules
-│   │   ├── horizons.py        # JPL Horizons client
-│   │   ├── pds_fetcher.py     # PDS data fetcher
-│   │   └── data_merger.py     # Data merging utilities
-│   └── utils/                 # Utility functions
-│       └── czml_generator.py  # CZML generation (legacy)
-│
+│   ├── main.py                 # Main API server
+│   ├── config.py               # Configuration
+│   ├── models.py               # Pydantic models
+│   ├── requirements.txt        # Python dependencies
+│   ├── fetch_data/             # Data fetching modules
+│   │   └──horizons.py          # JPL Horizons client 
+│   └── utils/                  # Utility functions
+|
 ├── frontend/                   # React + Three.js frontend
 │   ├── src/
 │   │   ├── components/
@@ -172,6 +169,12 @@ Frontend will run at `http://localhost:3000`
 │       ├── Neptune.json
 │       └── Sun.json
 │
+|──paper/
+|  └── figures/                    
+│       ├── perihelion.png
+│       ├── graphs-comparisson.png
+|  └── paper.bib
+|  └── paper.md
 └── README.md
 ```
 
@@ -292,7 +295,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 For questions, issues, or contributions:
 - **GitHub Issues**: [Create an issue](https://github.com/TheVishalKumar369/3I_ATLAS/issues)
-- **Email**: panchanarayansahu00@gmail.com
+- **Email**: panchanarayansahu48@gmail.com
 ##  Contributing
 
 Contributions are welcome! Please:
