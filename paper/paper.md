@@ -12,9 +12,9 @@ tags:
 authors:
   - name: Pancha Narayan Sahu
     orcid: 0009-0003-7618-7588
-    affiliation: "1"
+    affiliation: 1
 affiliation:     
-  -  name: Independent Student Researcher
+  -  name: Independent Student Researcher, Nepal
      index: 1
 
 date: 2025-10-24
