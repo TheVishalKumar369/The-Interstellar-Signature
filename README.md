@@ -291,8 +291,8 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ## Contact
 
 For questions, issues, or contributions:
-- **GitHub Issues**: [Create an issue](https://github.com/yourusername/3I_ATLAS/issues)
-- **Email**: panchanarayansahu00@gmail.com
+- **GitHub Issues**: [Create an issue](https://github.com/TheVishalKumar369/3I_ATLAS/issues)
+- **Email**: [contact me]panchanarayansahu00@gmail.com
 ##  Contributing
 
 Contributions are welcome! Please:
@@ -315,6 +315,7 @@ Contributions are welcome! Please:
 ---
 
 **Made with ❤️ for space exploration and scientific visualization**
+
 
 
 
