@@ -2,7 +2,8 @@
 
 An interactive 3D visualization platform for comparing trajectories of interstellar objects passing through our solar system. Built with Three.js, React, and FastAPI, powered by JPL Horizons ephemeris data.
 
-![3I/ATLAS Screenshot](https://via.placeholder.com/800x400?text=Add+Your+Screenshot+Here)
+![3I/ATLAS Screenshot]<img width="1909" height="890" alt="Screenshot (824)" src="https://github.com/user-attachments/assets/3cc9a2d7-a627-41d1-8d9c-9dd9ff5b73cf" />
+
 
 ## 🎯 Features
 
@@ -310,3 +311,4 @@ Contributions are welcome! Please:
 ---
 
 **Made with ❤️ for space exploration and scientific visualization**
+
