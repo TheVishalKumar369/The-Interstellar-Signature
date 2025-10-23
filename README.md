@@ -2,7 +2,7 @@
 
 An interactive 3D visualization platform for comparing trajectories of interstellar objects passing through our solar system. Built with Three.js, React, and FastAPI, powered by JPL Horizons ephemeris data.
 
-<img width="1909" height="890" alt="Screenshot (824)" src="https://github.com/user-attachments/assets/3cc9a2d7-a627-41d1-8d9c-9dd9ff5b73cf" />\
+<img width="1909" height="890" alt="Screenshot (824)" src="https://github.com/user-attachments/assets/3cc9a2d7-a627-41d1-8d9c-9dd9ff5b73cf" /><br>
 <img width="1920" height="916" alt="overview_2" src="https://github.com/user-attachments/assets/20a2f4bc-1b88-48c7-891d-00e28650bde5" />\
 <img width="732" height="463" alt="distance_comparisson" src="https://github.com/user-attachments/assets/c9c2ccc2-5498-4cfe-b10d-042979438c28" />\
 <img width="723" height="481" alt="velocity" src="https://github.com/user-attachments/assets/08c14c15-8fa9-4a74-b9c2-8f555bf6a43c" />\
@@ -316,6 +316,7 @@ Contributions are welcome! Please:
 ---
 
 **Made with ❤️ for space exploration and scientific visualization**
+
 
 
 
