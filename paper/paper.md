@@ -1,9 +1,22 @@
 ---
 title: "THE INTERSTELLAR SIGNATURE: A COMPUTATIONAL FRAMEWORK FOR OPEN SOURCE INTERSTELLAR TRACKING"
+tags: 
+- python
+- astronomy
+- 3I/ATLAS
+- astropy
+- astrophysics
+- orbital mechanics 
+- Interstellar objects
+- Space Simulation
 authors:
   - name: Pancha Narayan Sahu
     orcid: 0009-0003-7618-7588
-    affiliation: "Independent Student Researcher"
+    affiliation: "1"
+affiliation:     
+  -  name: Independent Student Researcher
+     index: 1
+
 date: 2025-10-24
 bibliography: paper.bib
 ---
