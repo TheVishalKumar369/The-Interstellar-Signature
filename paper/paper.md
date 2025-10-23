@@ -60,10 +60,10 @@ npm run dev
 ```
 
 ![Perihelion of the 3I/ATLAS](figures/perihelion.png)
-*Figure 1: Perihelion positions of interstellar objects simulated in 3I/ATLAS.*
+*Figure 1: Perihelion positions of interstellar object 3I/ATLAS simulated in The Interstellar Signature.*
 
 ![Graphs comparison of the Interstellar Objects](figures/graphs-comparisson.png)
-*Figure 2: Comparison of velocities and trajectories of interstellar objects.*
+*Figure 2: Comparison of velocities and distance of interstellar objects.*
 
 Interstellar object data is sourced from the Minor Planet Center [@mpc2025] and JPL Horizons [@jpl2025].  
 The backend is implemented in Python [@python2025] using FastAPI [@fastapi2025], and the frontend uses Three.js [@threejs2025] for 3D visualization.  
