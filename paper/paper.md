@@ -5,7 +5,7 @@ authors:
     orcid: 0009-0003-7618-7588
     affiliation: "Independent Student Researcher"
 date: 2025-10-24
-args: "--bibliography paper.bib"
+bibliography: paper.bib
 ---
 
 ## Summary
