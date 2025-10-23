@@ -1,4 +1,4 @@
-#  3I/ATLAS - Interstellar Objects Visualization
+#  THE INTERSTELLAR SIGNATURE
 
 An interactive 3D visualization platform for comparing trajectories of interstellar objects passing through our solar system. Built with Three.js, React, and FastAPI, powered by JPL Horizons ephemeris data.
 
