@@ -5,6 +5,8 @@ authors:
     orcid: 0009-0003-7618-7588
     affiliation: "Independent Student Researcher"
 date: 2025-10-24
+bibliography: paper.bib
+csl: apa.csl
 ---
 
 ## Summary
@@ -69,8 +71,4 @@ Interstellar object data is sourced from the Minor Planet Center [@mpc2025] and 
 The backend is implemented in Python [@python2025] using FastAPI [@fastapi2025], and the frontend uses Three.js [@threejs2025] for 3D visualization.  
 The software leverages datasets from the Planetary Data System [@pds2025] and Gaia Archive [@esa2025], and visualization tools such as NASA Eyes [@nasaeyes2025], Celestia [@celestia2025], and SpaceEngine [@spaceengine2025].
 
----
-bibliography: paper.bib
-csl: apa.csl
----
 
