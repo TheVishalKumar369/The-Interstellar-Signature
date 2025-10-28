@@ -84,3 +84,7 @@ The backend is implemented in Python [@python2025] using FastAPI [@fastapi2025],
 The software leverages datasets from the Planetary Data System [@pds2025] and Gaia Archive [@esa2025], and visualization tools such as NASA Eyes [@nasaeyes2025], Celestia [@celestia2025], and SpaceEngine [@spaceengine2025].
 
 
+# Software
+
+The software developed for this work, Interstellar Signature v1.0.0 [@InterstellarSignature2025], is open-source and archived at Zenodo.
+
