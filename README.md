@@ -1,3 +1,5 @@
+[![DOI](https://zenodo.org/badge/1075428480.svg)](https://doi.org/10.5281/zenodo.17470251)
+
 #  THE INTERSTELLAR SIGNATURE
 
 An interactive 3D visualization platform for comparing trajectories of interstellar objects passing through our solar system. Built with Three.js, React, and FastAPI, powered by JPL Horizons ephemeris data.
