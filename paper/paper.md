@@ -75,7 +75,7 @@ npm run dev
 ![Graphs comparison of the Interstellar Objects](figures/graphs-comparisson.png)
 *Figure 2: Comparison of velocities and distance of interstellar objects.*
 
-# Software
+# Software and Reference
 
 The software developed for this work, Interstellar Signature v1.0.0 [@InterstellarSignature2025], is open-source and archived at Zenodo.
 
