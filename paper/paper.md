@@ -8,6 +8,7 @@ version: "v1.0.0"
 doi: 10.5281/zenodo.17470252
 repository: https://github.com/TheVishalKumar369/The-Interstellar-Signature
 archive: https://doi.org/10.5281/zenodo.17470252
+biblliography: paper.bib 
 ---
 
 **Interstellar Signature** serves as a bridge between raw, unstructured astronomical data and an intuitive, developer-friendly interface. This framework integrates live astronomical data from public repositories and APIs with physics-based simulation techniques to model and visualize the motion of both solar system and interstellar objects in real time. The platform provides interactive visualizations, comparative analysis of interstellar and solar system objects, and modular tools that allow users to explore, modify, and extend the framework for their own research purposes.
