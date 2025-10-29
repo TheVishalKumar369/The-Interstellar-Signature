@@ -33,13 +33,6 @@ The author extends sincere gratitude to the NASA Jet Propulsion Laboratory (JPL)
 
 Finally, the author recognizes the importance of open data and collaborative science communities that continue to advance public engagement and understanding of interstellar research.
 
-### References
-
-If you refer to other tools, papers, or libraries in your text, list them here in a simple numbered format, e.g.:
-
-1. Smith A, Jones B. (2023). A related tool for…  
-2. Doe C. (2022). Another relevant library…
-
 ### Implementation and architecture
 
 Clone the repository:
